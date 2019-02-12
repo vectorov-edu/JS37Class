@@ -1,0 +1,12 @@
+extends layout.pug
+
+block content
+    h1 All courses
+
+    form(method="post" action="/courses/add")
+        fieldset.form-group
+            label(for="name") Name:
+            input.form-control(id="name", name="name", type="test", placeholder="Enter course name")
+            small.text-muted Add your new course
+        button.btn.btn-primary(type="submit") Create course
+        a.btn.btn-default(href="/courses") Cancel
